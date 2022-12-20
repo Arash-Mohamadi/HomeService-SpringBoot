@@ -2,6 +2,7 @@ package com.example.homeservicespringboot.entity.capability;
 
 
 import com.example.homeservicespringboot.entity.users.Specialist;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
@@ -27,11 +28,11 @@ public class Suggestion extends BaseAbility {
     private double duration; //  unit of hour
 
     @ToString.Exclude
-    @ManyToOne  //bidirectional
+    @ManyToOne(cascade = CascadeType.MERGE)  //bidirectional
     private Specialist specialist;
 
     @ToString.Exclude
-    @ManyToOne //bidirectional
+    @ManyToOne(cascade = CascadeType.MERGE) //bidirectional
     private Order order;
 
     public Suggestion(double price, double duration) {

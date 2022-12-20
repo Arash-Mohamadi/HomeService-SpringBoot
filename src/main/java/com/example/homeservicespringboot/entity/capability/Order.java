@@ -28,10 +28,9 @@ public class Order extends BaseAbility {
 
     private double price;
 
-    private LocalTime startWork;
-    private LocalTime endWork;
+    private  LocalTime startWork;
 
-    private String day;
+    private LocalDate date;
 
     private String description;
     private String address;
@@ -56,7 +55,7 @@ public class Order extends BaseAbility {
     @ToString.Exclude
     private Opinion opinion;
 
-    @ManyToOne //bidirectional
+    @ManyToOne(cascade = CascadeType.MERGE) //bidirectional
     @ToString.Exclude
     private Specialist specialist;
 
@@ -69,11 +68,14 @@ public class Order extends BaseAbility {
         this.setOpinion(opinion);
         opinion.setOrder(this);
     }
-    public Order(double price, LocalTime startWork, LocalTime endWork, String day, String description, String address) {
+
+    public Order( double price,
+                 LocalTime startWork, LocalDate date,
+                 String description, String address) {
+
         this.price = price;
         this.startWork = startWork;
-        this.endWork = endWork;
-        this.day = day;
+        this.date = date;
         this.description = description;
         this.address = address;
     }

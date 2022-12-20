@@ -39,11 +39,11 @@ public class Person extends BaseEntity<Long> {
 
     @Column(unique = true,nullable = false)
     @NotBlank(message = "username should not contains null value or space . ")
-    @Pattern(regexp = "^[A-Za-z0-9._]$")
+    @Pattern(regexp = "^[A-Za-z0-9._]+$")
     private String username;
     @Column(nullable = false)
     @NotBlank(message = "password should not contains null value or space . ")
-    @Pattern(regexp = "^[A-Za-z0-9._$%^&*#!@\\-/\\\\]{8,}$")
+    @Pattern(regexp = "^[A-Za-z0-9._$%^&*#!@\\-/\\\\]{8,}+$")
     private String password;
 
     @CreationTimestamp

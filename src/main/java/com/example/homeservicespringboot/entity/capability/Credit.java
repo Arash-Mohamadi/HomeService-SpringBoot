@@ -9,7 +9,7 @@ import org.hibernate.annotations.ColumnDefault;
 @Setter
 @ToString
 @NoArgsConstructor
-@AllArgsConstructor
+
 public class Credit extends BaseAbility {
     @ColumnDefault("0")
     private double balance;

@@ -1,7 +1,7 @@
 package com.example.homeservicespringboot.entity.enums;
 
 public enum UserType {
-    ADMIN,
+    MANAGER,
     CUSTOMER,
     SPECIALIST
 

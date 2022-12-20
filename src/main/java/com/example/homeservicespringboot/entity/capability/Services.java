@@ -27,7 +27,7 @@ public class Services extends BaseAbility {
     private String name;
 
     @ToString.Exclude
-    @OneToMany(mappedBy = "services",cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "services",cascade = CascadeType.REMOVE,orphanRemoval = true)
     private List<SubServices> subList;
 
     @ToString.Exclude

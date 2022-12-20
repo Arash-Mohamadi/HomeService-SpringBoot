@@ -54,9 +54,19 @@ public class Specialist extends Person {
     @ToString.Exclude
     private List<Order> orders;
 
-
+    public void addSubService(SubServices subServices ){
+        this.getSubServicesSet().add(subServices);
+        subServices.getSpecialistSet().add(this);
+    }
     public Specialist(String firstname, String lastname, String email, String username, String password, byte[] photo) {
         super(firstname, lastname, email, username, password);
         this.photo = photo;
     }
+
+    public Specialist(String firstname, String lastname, String email, String username, String password) {
+        super(firstname, lastname, email, username, password);
+
+    }
+
+
 }
