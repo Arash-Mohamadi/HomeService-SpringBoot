@@ -12,15 +12,18 @@ public interface CustomerService {
 
     boolean signup(Customer customer);
 
-    Customer editPassword(String password);
+    Customer editPassword(String username ,String password);
 
-    boolean registerOrder(Order order, String subServiceName);
+    boolean registerOrder(Order order, String subServiceName,String customerUsername);
 
     boolean registerOpinion(Opinion opinion, Long orderId);
 
-    boolean selectSpecialist();
+    boolean selectSpecialist(Long suggestionId,Long orderId);
 
-    List<Suggestion> showAllSuggestion();
+    List<Suggestion> showAllSuggestionWithPrice(Long orderId);
+    List<Suggestion> showAllSuggestionWithScore(Long orderId);
+
+    boolean changeStatusOrderToStarted(Long orderId);
 
 
 
