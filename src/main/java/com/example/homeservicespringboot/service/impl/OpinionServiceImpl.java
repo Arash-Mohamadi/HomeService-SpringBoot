@@ -11,8 +11,14 @@ public class OpinionServiceImpl implements OpinionService {
     // constructor
 
 
+    public OpinionServiceImpl(OpinionRepository opinionRepository) {
+        this.opinionRepository = opinionRepository;
+    }
+
     @Override
     public boolean createOpinion(Opinion opinion) {
-        return false;
+
+        opinionRepository.save(opinion);
+        return true;
     }
 }
