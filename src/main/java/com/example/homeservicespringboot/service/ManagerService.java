@@ -14,13 +14,13 @@ public interface ManagerService {
 
     boolean addSubServicesToServices(String serviceName, SubServices subServices);
 
-    boolean removeSubServicesOfServices(String serviceName, String subServiceName);
+    boolean removeSubServicesOfServices( String subServiceName);
 
     boolean addSpecialistToSubServices(String subServiceName, String specialistUsername);
 
     boolean removeSpecialistOfSubServices(String subServiceName, String specialistUsername);
 
-    Manager editPassword(String password);
+    Manager editPassword(String username ,String password);
 
     boolean confirmSpecialist(String specialistUsername);
 
