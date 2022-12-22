@@ -30,8 +30,8 @@ class CustomerServiceImplTest {
 
     @Test
     void signup() {
-        Customer customer = new Customer("jafar", "kiya", "jafar110@email",
-                "behnam", "123456789");
+        Customer customer = new Customer("jafar", "kiya", "llkdkjdf0@email",
+                "jdjhdh", "123456789");
         boolean bool = customerService.signup(customer);
         assertTrue(bool);
 
@@ -55,19 +55,19 @@ class CustomerServiceImplTest {
     @Test
     void registerOpinion() {
         Opinion opinion = new Opinion(10);
-        boolean bool = customerService.registerOpinion(opinion, 3L);
+        boolean bool = customerService.registerOpinion(opinion, 5L);
         assertTrue(bool);
     }
 
     @Test
     void selectSpecialist() {
-        boolean bool = customerService.selectSpecialist(2L, 4L);
+        boolean bool = customerService.selectSpecialist(3L, 4L);
         assertTrue(bool);
     }
 
     @Test
     void changeStatusOrderToStarted() {
-        boolean bool = customerService.changeStatusOrderToStarted(4l);
+        boolean bool = customerService.changeStatusOrderToStarted(6L);
         assertTrue(bool);
     }
 

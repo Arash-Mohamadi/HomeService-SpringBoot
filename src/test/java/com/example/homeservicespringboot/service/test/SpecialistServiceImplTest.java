@@ -22,8 +22,8 @@ class SpecialistServiceImplTest {
 
     @Test
     void signup() {
-        Specialist specialist = new Specialist("arash","moh","ali@gmail"
-                ,"ali01","Arash1234");
+        Specialist specialist = new Specialist("arash","moh","farhad@gmail"
+                ,"farhad01","Arash1234");
         File file = new File("src/main/image.jpg");
         boolean bool = specialistService.signup(specialist, file);
         assertTrue(bool);
@@ -31,7 +31,7 @@ class SpecialistServiceImplTest {
 
     @Test
     void editPassword() {
-        Specialist specialist = specialistService.editPassword("ali01", "12345696");
+        Specialist specialist = specialistService.editPassword("gaf", "12345696");
         String newPass = "12345696";
         assertEquals(specialist.getPassword(),newPass);
     }
@@ -39,8 +39,8 @@ class SpecialistServiceImplTest {
     @Test
     void sendSuggestion() {
 
-        Suggestion suggestion = new Suggestion(15,2);
-        boolean bool = specialistService.sendSuggestion(suggestion, 3L, "ali01");
+        Suggestion suggestion = new Suggestion(16,2);
+        boolean bool = specialistService.sendSuggestion(suggestion, 3L, "safdar01");
         assertTrue(bool);
 
     }

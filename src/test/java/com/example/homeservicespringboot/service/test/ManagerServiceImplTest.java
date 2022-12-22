@@ -25,34 +25,34 @@ class ManagerServiceImplTest {
 
     @Test
     void addService() {
-        Services services = new Services("building");
+        Services services = new Services("hhhhhh");
         boolean bool = managerService.addService(services);
         assertTrue(bool);
     }
 
     @Test
     void addSubServicesToServices() {
-        SubServices subServices = new SubServices(10,"tool for home","window");
+        SubServices subServices = new SubServices(10,"tool for home","hydhtev");
         boolean bool = managerService.addSubServicesToServices("building", subServices);
         assertTrue(bool);
     }
 
     @Test
     void removeSubServicesOfServices() {
-        boolean bool = managerService.removeSubServicesOfServices( "window");
+        boolean bool = managerService.removeSubServicesOfServices( "ghfshhe");
         assertTrue(bool);
     }
 
     @Test
     void addSpecialistToSubServices() {
-        boolean bool = managerService.addSpecialistToSubServices("window", "ali01");
+        boolean bool = managerService.addSpecialistToSubServices("window", "safdar01");
         assertTrue(bool);
     }
 
     @Test
     void removeSpecialistOfSubServices() {
 
-        boolean bool = managerService.removeSpecialistOfSubServices("window", "ali01");
+        boolean bool = managerService.removeSpecialistOfSubServices("window", "gaf");
         assertTrue(bool);
 
 
@@ -74,7 +74,7 @@ class ManagerServiceImplTest {
     @Test
     void editSubServices() {
         SubServices subServices = new SubServices(11,"tool for building","door");
-        boolean bool = managerService.editSubServices("window", subServices);
+        boolean bool = managerService.editSubServices("roof", subServices);
         assertTrue(bool);
     }
 
